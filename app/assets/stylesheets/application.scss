@@ -10,3 +10,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+    h1 {
+        font-family: $headers-font;
+    }
+    p {
+        font-family: $body-font;
+    }
+}
