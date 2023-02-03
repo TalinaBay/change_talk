@@ -1,0 +1,15 @@
+.button {
+    text-decoration: none;
+    padding: 8px 24px;
+    border-radius: 16px;
+}
+
+.button-orange {
+    background-color: $orange-pop;
+    color: white;
+
+    &:hover {
+        color: $orange-pop;
+        background-color: white;
+    }
+}

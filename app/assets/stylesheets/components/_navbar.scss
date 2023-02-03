@@ -1,6 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  height: 5vh;
+  box-shadow: 2px 2px 16px rgba($forest-green, $alpha: 0.1);
+  position: sticky;
+  top: 0px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +13,8 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-link:hover {
+  color: $orange-pop;
 }
