@@ -1,0 +1,23 @@
+.workshop_cards { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+
+    a {
+        text-decoration: none;
+    }
+}
+.workshop_card { 
+    background-color: $primary-color;
+    border-radius: 16px;
+    padding: 16px;
+
+    img {
+        width: 350px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+}

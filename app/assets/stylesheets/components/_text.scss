@@ -1,3 +1,7 @@
-.green_colour {
-    color: $forest_green;
+h2, h1, h3, p {
+    color: $secondary-color;
+}
+
+h3 {
+    opacity: 0.3;
 }

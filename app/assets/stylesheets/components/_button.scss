@@ -5,11 +5,11 @@
 }
 
 .button-orange {
-    background-color: $orange-pop;
+    background-color: $accent-color;
     color: white;
 
     &:hover {
-        color: $orange-pop;
+        color: $accent-color;
         background-color: white;
     }
 }
