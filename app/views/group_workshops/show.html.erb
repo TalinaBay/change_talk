@@ -1,14 +1,16 @@
 <div class="container my-3">
+    <%# Stages of change bar %>
     <div data-controller="stages-of-change-list">
         <div class="progress">
             <div data-action="click->stages-of-change-list#precstage" data-stages-of-change-list-target="precstagetext" class="progress-bar progress-bar-grad-1">Precontemplation</div>
             <div data-action="click->stages-of-change-list#cstage" data-stages-of-change-list-target="cstagetext" class="progress-bar progress-bar-grad-2">Contemplation</div>
-            <div data-action="click->stages-of-change-list#prepstage" data-stages-of-change-list-target="prepstagetext" class="progress-bar progress-bar-grad-3">Preparation</div>
-            <div data-action="click->stages-of-change-list#actionstage" data-stages-of-change-list-target="actionstagetext" class="progress-bar progress-bar-grad-4">Action</div>
+            <div data-action="click->stages-of-change-list#prepstage" data-stages-of-change-list-target="prepstagetext" class="progress-bar progress-bar-grad-3">Preparation-Action</div>
             <div data-action="click->stages-of-change-list#maintstage" data-stages-of-change-list-target="maintstagetext" class="progress-bar progress-bar-grad-5">Maintenance</div>
+            <div data-action="click->stages-of-change-list#relapsestage" data-stages-of-change-list-target="relapsestagetext" class="progress-bar progress-bar-grad-4">Relapse</div>
         </div>
         <div>
             <%= render partial: "precont_stage" %>
         </div>
     </div>
+    <%#  %>
 </div> 
