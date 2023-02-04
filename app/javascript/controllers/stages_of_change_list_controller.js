@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["precdescription", "cdescription", "prepdescription", "relapsedescription", "maintdescription", "precstagetext", "cstagetext", "prepstagetext", "relapsestagetext", "maintstagetext"]
   connect() {
+    this.precstage()
   }
 
   precstage() {
