@@ -1,23 +1,71 @@
+.workshop_cards_background {
+    background-color: rgba($primary-color, 0.1);
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    i {
+        color: $accent-color;
+    }
+}
+
+.workshop-ticks {
+    display: flex;
+    justify-content: center;
+    
+    p {
+        margin: 16px;
+        margin-top: 0;
+    }
+}
+
 .workshop_cards { 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 90vh;
-
+    
     a {
         text-decoration: none;
     }
 }
-.workshop_card { 
-    background-color: $primary-color;
+.workshop_card {
+    background-color: white;
     border-radius: 16px;
-    padding: 16px;
+    box-shadow: 0px 0px 16px rgba($color: #000000, $alpha: 0.1);
+    width: 30%;
+
+    flex-grow: 1; // to make cards the same height
+    
+    
+    &:hover {
+        box-shadow: 0px 0px 16px rgba($color: #000000, $alpha: 0.2);
+    }
+
+    .card-descr {
+        padding: 16px;
+        text-align: left;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    span {
+        font-weight: bold;
+    }
 
     img {
-        width: 350px;
+        width: 100%;
         height: 200px;
         object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 16px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    li {
+        color: $secondary-color;
     }
 }

@@ -1,15 +1,17 @@
 .button {
     text-decoration: none;
     padding: 8px 24px;
-    border-radius: 16px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .button-orange {
-    background-color: $accent-color;
-    color: white;
+    background-color: rgba($accent-color, 0.2);
+    color: $accent-color;
 
     &:hover {
-        color: $accent-color;
-        background-color: white;
+        color: white;
+        background-color: $accent-color;
     }
 }

@@ -1,26 +1,60 @@
-<div class="container">
-    <div class="workshop_cards">
-        <%= link_to group_path(1) do %>
-            <div class="workshop_card">
-                <%= image_tag("young_doctor.jpeg") %>
-                <h3>WORKSHOP 1/3</h3>
-                <p>In this workhsop, you will learn </p>
-            </div>
-        <% end %>
-        <%= link_to group_path(2) do %>
-            <div class="workshop_card">
-                <%= image_tag("consult.jpg") %>
-                <h3>WORKSHOP 2/3</h3>
-                <p>In this workhsop, you will learn </p>
-            </div>
-        <% end %>
-        <%= link_to group_path(3) do %>
-            <div class="workshop_card">
-                <%= image_tag("group_dicsussion.jpg") %>
-                <h3>WORKSHOP 3/3</h3>
-                <p>In this final workhsop, you will learn </p>
-            </div>
-        <% end %>
-    
+<div class="workshop_cards_background">
+    <div class="container-sm">
+        <h1 class="mb-3">Group workshops to earn CPD hours</h1>
+        <p>1-hour workhops that are designed to satisfy the new MBA requirements for Reviewing Performace or Measuring Outcomes CPD.</p>
+        <div class="workshop-ticks">
+            <p class="bold-text"><i class="fa-sharp fa-solid fa-circle-check"></i> 3 hours</p>
+            <p class="bold-text"><i class="fa-sharp fa-solid fa-circle-check"></i> Fully online</p>
+            <p class="bold-text"><i class="fa-sharp fa-solid fa-circle-check"></i> Complete any time</p>
+            <p class="bold-text"><i class="fa-sharp fa-solid fa-circle-check"></i> Download a certificate</p>
+        </div>
+
+        <div class="workshop_cards mt-3">
+            <%= link_to group_path(1) do %>
+                <div class="workshop_card">
+                    <%= image_tag("young_doctor.jpeg") %>
+                    <div class="card-descr">
+                        <h3>LEARNING BASICS</h3>
+                        <ul>
+                            <li><span>Stages of change</span> and appropriate treatments</li>
+                            <li>Motivational Interviewing <span>(MI)</span></li>
+                            <li>What <span>motivation</span> really is if it's not a feeling of excitement</li>
+                            <li>Relationship between <span> health illiteracy </span> and motivation</li>
+                        </ul>
+                        <%= link_to "Workshop 1", group_path(1), class: "button button-orange" %>
+                    </div>
+
+                </div>
+            <% end %>
+            <%= link_to group_path(2) do %>
+                <div class="workshop_card mx-3">
+                    <%= image_tag("consult.jpg") %>
+                    <div class="card-descr">
+                        <h3>EXPLORE CHALLENGES</h3>
+                        <ul>
+                            <li>Explore what the <span>challenges</span> are for patients and doctors</li>
+                            <li>Examples of <span>brief conversations</span> in practice</li>
+                            <li>MI skills for <span>pre-contemplative, contemplative</span> patients</li>
+                        </ul>
+                        <%= link_to "Workshop 2", group_path(1), class: "button button-orange" %>
+                    </div>
+                </div>
+            <% end %>
+            <%= link_to group_path(3) do %>
+                <div class="workshop_card">
+                    <%= image_tag("group_dicsussion.jpg") %>
+                    <div class="card-descr">
+                        <h3>PRACTICE IMPLEMENTATIONS</h3>
+                        <ul>
+                            <li>Explore real-world <span>practice implementations</span></li>
+                            <li>specific treatments for <span>specific conditions</span> (evidence for weight management, alcohol/smoking cessation)</li>
+                            <li>Provide <span>patient information</span></li>
+                        </ul>
+                        <%= link_to "Workshop 3", group_path(1), class: "button button-orange" %>
+                    </div>
+                </div>
+            <% end %>
+        
+        </div>
     </div>
 </div>
