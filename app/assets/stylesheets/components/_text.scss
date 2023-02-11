@@ -1,10 +1,5 @@
-h2, h1, h3, p {
+h2, h1, h3, p, li {
     color: $secondary-color;
-}
-
-h3 {
-    opacity: 0.3;
-    font-size: 14px;
 }
 
 h1 {
@@ -12,6 +7,20 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    opacity: 0.3;
+    font-size: 14px;
+}
+
+
 .bold-text {
     font-weight: bold;
+}
+
+p, li {
+    font-size: 16px;
 }
