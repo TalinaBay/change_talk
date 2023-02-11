@@ -44,7 +44,7 @@
     }
 
     .card-descr {
-        padding: 16px;
+        padding: 24px;
         text-align: left;
         height: 300px;
         display: flex;
@@ -65,7 +65,14 @@
         border-top-right-radius: 16px;
     }
 
+    ul {
+        padding-left: 16px;
+    }
     li {
+        width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
         color: $secondary-color;
     }
 }
