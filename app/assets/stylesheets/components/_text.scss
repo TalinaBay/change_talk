@@ -24,3 +24,8 @@ h3 {
 p, li {
     font-size: 16px;
 }
+
+li > a {
+    text-decoration: none;
+    color: $secondary-color;
+}

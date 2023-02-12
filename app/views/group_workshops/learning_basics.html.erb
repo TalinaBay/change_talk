@@ -1,8 +1,28 @@
-<div class="container my-3">
-    <%# Stages of change bar %>
-    <h1>Workshop 1</h1>
+<div class="container-sm my-3">
+    <%# General intro %>
+    <h1>Welcome!</h1>
+    <p>We're glad you're here for our online workshop for general practitioners on applying strategies from motivational interviewing to help patients modify their behaviour. The goal of this training is to give GPs the skills and information they need to effectively employ motivational interviewing strategies to help their patients modify their behaviour.</p>
+    <p>During this workshop, participants will not only learn about the principles and techniques of Motivational Interviewing, but also about the stages of change, the link between motivation and health literacy, and the two essential components of motivation. We will delve into how to place a high sense of importance or value in changing an aspect of behavior and how to build self-efficacy or confidence in one's ability to change. With this knowledge, GPs can tailor their approach to best suit the patient's needs, increase the likelihood of success, and reduce the risk of relapse.</p>
+    <p>By the end of this workshop, participants will have a deeper understanding of how to use Motivational Interviewing in their practice to help patients achieve their health goals. We look forward to sharing our expertise with you and helping you enhance your skills as a GP.</p>
+    <h3>Table of Contents</h3>
+    <ul>
+		<li><a href="#theory">Theory</a></li>
+            <ul>
+                <li><a href="#stages-of-change">Stages of change</a></li>
+                <li><a href="#motivation">Motivation</a></li>
+                <li><a href="#motivation-and-health-literacy">Motivation and health literacy</a></li>
+            </ul>
+		<li><a href="#activities">Activities</a></li>
+	</ul>
+
     <hr>
-    <div data-controller="stages-of-change-list">
+
+    <%# Stages of change %>
+    <h2 id="stages-of-change">Stages of change</h2>
+    <p>In this part of the workshop, we will be discussing the five stages of behavioral change. Understanding these stages is essential in guiding patients towards lasting behavior change.</p>
+    <p>We will explore each stage, from pre-contemplation to maintenance and relapse, and learn how to identify where a patient is in their journey towards change. With this knowledge, GPs can tailor their approach to best suit the patient's needs, increase the likelihood of success, and reduce the risk of relapse.</p>
+    <p class="bold-text"><i class="fa-solid fa-chalkboard-user"></i>  Please go through all stages of change by clicking on the names.</p>
+    <div class="stages-div" data-controller="stages-of-change-list">
         <div class="progress">
             <div data-action="click->stages-of-change-list#precstage" data-stages-of-change-list-target="precstagetext" class="progress-bar">Precontemplation</div>
             <div data-action="click->stages-of-change-list#cstage" data-stages-of-change-list-target="cstagetext" class="progress-bar">Contemplation</div>
@@ -17,6 +37,9 @@
     
     <%# Motivation %>
     <hr>
-    <h2>Motivation</h2>
-
+    <h2 id="motivation">Motivation</h2>
+    <h2 id="motivation-and-health-literacy">Motivation and health literacy</h2>
+    <p>Effective communication is crucial in healthcare to ensure high-quality patient outcomes. Health literacy, the ability to obtain and understand health information, plays a significant role in health outcomes. Poor health literacy can result in low adherence to treatment and health recommendations, poor health outcomes, and increased medical costs.</p>
+    <p>When patients don't understand the information given to them during a consultation, they may not be able to indicate that they don't understand. This could lead to confusion about what to do next and poor adherence to instructions, which may be misread as "low motivation".</p>
+    <p>The "teach-back" method is a communication approach that can help address this issue. In this method, the healthcare provider presents information to the patient and asks the patient to repeat it back in their own words to assess comprehension. The definition of the method varies, but they all include a cyclical process of assessing and reassessing patient understanding. However, inconsistencies exist in definitions regarding follow-up steps for information gaps or misunderstandings, the number of cycles, and the inclusion of a framing phrase to reduce patient stigma.</p>
 </div> 

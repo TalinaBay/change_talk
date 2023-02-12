@@ -14,3 +14,11 @@
         background-color: $accent-color;
     }
 }
+
+.stages-div {
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    background-color: rgba($color: $primary-color, $alpha: 0.2);
+}
