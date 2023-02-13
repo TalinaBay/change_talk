@@ -15,3 +15,12 @@
         background-color: $accent-color;
     }
 }
+
+.button-ghost-orange {
+    color: rgba($accent-color, 0.8);
+    border: -2px solid $primary-color;
+
+    &:hover {
+        color: $accent-color;
+    }
+}

@@ -28,6 +28,7 @@ export default class extends Controller {
         elements[i].classList.add('incorrect')
         // TODO: Add explanation
       }
+      // Add a case when not all answers were selected
     }
   }
 
@@ -37,5 +38,19 @@ export default class extends Controller {
     // console.log(event.currentTarget.dataset.quizAnswer) // returns the value of data-*
     // const result = this.firstQTarget.children[0].classList.contains('active') === event.currentTarget.dataset.quizAnswer;
     // console.log(result);
+  }
+
+  reset(event) {
+    event.preventDefault();
+    let elements = this.firstQTarget.children;
+    this.removeAllClasses(elements);
+    elements = this.secondQTarget.children;
+    this.removeAllClasses(elements);
+  }
+
+  removeAllClasses(questions) { 
+    for (let i = 0; i < questions.length; i++) {
+      questions[i].classList.remove("active", "correct", "incorrect");
+    }
   }
 }
