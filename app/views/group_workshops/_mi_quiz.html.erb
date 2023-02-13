@@ -1,0 +1,21 @@
+ <div data-controller="mi-quiz">
+        <div class="quiz">
+            <p class="bold-text">Q1: How do you spell "Red"?</p>
+            <ul data-mi-quiz-target="firstQ">
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">a. Red</li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">b. Reed</li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">c. Req</li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">d. Sed</li>
+            </ul>
+            
+            <p class="bold-text">Q2: How do you spell "Green"?</p>
+            <ul data-mi-quiz-target="secondQ">
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">a. Greeen</li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">b. Green</li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">c. Gren</li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">d. Grenn</li>
+            </ul>
+           
+        <a href="" data-action="click->mi-quiz#submit" class="button button-orange">Check results</a>
+        </div>
+</div>

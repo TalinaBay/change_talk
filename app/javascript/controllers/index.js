@@ -7,5 +7,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import MiQuizController from "./mi_quiz_controller"
+application.register("mi-quiz", MiQuizController)
+
 import StagesOfChangeListController from "./stages_of_change_list_controller"
 application.register("stages-of-change-list", StagesOfChangeListController)
