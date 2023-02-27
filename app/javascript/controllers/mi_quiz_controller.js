@@ -5,7 +5,8 @@ export default class extends Controller {
   static targets = ["firstQ", "secondQ"]
 
   connect() {
-    console.log(this.constructor.targets);
+    // console.log(this.constructor.targets);
+    console.log("19:59");
   }
 
   submit(event) {
@@ -23,11 +24,18 @@ export default class extends Controller {
   checkQuiz(elements) {
     for (let i = 0; i < elements.length; i++) {
       if (elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "true")){
-        elements[i].classList.add('correct')
+        elements[i].classList.add('correct');
+        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle-check"></i>';
       } else if (elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "false")) {
-        elements[i].classList.add('incorrect')
-        // TODO: Add explanation
+        elements[i].classList.add('incorrect');
+        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+      } else if (!elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "false")) {
+        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+      } else if (!elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "true")) {
+        elements[i].classList.add('incorrect');
+        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle-check"></i>';
       }
+      // TODO: Add explanation
       // Add a case when not all answers were selected
     }
   }
@@ -38,6 +46,7 @@ export default class extends Controller {
     // console.log(event.currentTarget.dataset.quizAnswer) // returns the value of data-*
     // const result = this.firstQTarget.children[0].classList.contains('active') === event.currentTarget.dataset.quizAnswer;
     // console.log(result);
+    event.currentTarget.querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle"></i>';
   }
 
   reset(event) {
@@ -48,9 +57,10 @@ export default class extends Controller {
     this.removeAllClasses(elements);
   }
 
-  removeAllClasses(questions) { 
-    for (let i = 0; i < questions.length; i++) {
-      questions[i].classList.remove("active", "correct", "incorrect");
+  removeAllClasses(questionOptions) { 
+    for (let i = 0; i < questionOptions.length; i++) {
+      questionOptions[i].classList.remove("active", "correct", "incorrect");
+      questionOptions[i].querySelector(".feedback").innerHTML = '<i class="fa-regular fa-circle"></i>';
     }
   }
 }

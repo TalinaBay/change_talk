@@ -22,56 +22,38 @@
     background:#f7f7f7;
     margin-bottom: 5px;
     cursor: pointer;
+    vertical-align: middle;
     
     &:hover {
       background:#eee;
     }
     
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      border: 1px solid #ccc;
-      border-radius: 50%;
-      background: #fff;
-      vertical-align: middle;
-      margin-right: 10px;
+    .feedback {
+      color: rgb(201, 200, 200);
+      font-size: 24px;
     }
     
     &.active {
-      &:before {
-        background-color: $accent-color;
-        border-color: $accent-color;
+      .feedback {
+        color: $accent-color;
       }
     }
+
     &.correct {
         background-color: rgba($color: #5cff71, $alpha: 0.2);
         border-radius: #5cff71;
-      &:before {
-        background-color: #5cff71;
-        border-color: #5cff71;
+      
+    }
+   
+    &.active.correct {
+      .feedback {
+        color: #5cff71;
       }
     }
     &.incorrect {
-        background-color: rgba($color: $accent-color, $alpha: 0.2);
+      background-color: rgba($color: $accent-color, $alpha: 0.2);
         border-color: $accent-color;
-      &:before {
-        background-color: $accent-color;
-        border-color: $accent-color;
-      }
-    }
-    &.active.correct {
-      &:before {
-        outline: 2px solid #5cff71;
-        outline-offset: 2px;
-      }
-    }
-    &.active.incorrect {
-      &:before {
-        outline: 2px solid $accent-color;
-        outline-offset: 2px;
-      }
     }
   }
+
   

@@ -1,20 +1,32 @@
  <div data-controller="mi-quiz">
         <div class="quiz">
-            <p class="bold-text">Q1: How do you spell "Red"?</p>
+            <p class="bold-text">Q1: Which one is correct for MI?</p>
             <ul data-mi-quiz-target="firstQ">
-                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">a. Red</li>
-                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">b. Reed</li>
-                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">c. Req</li>
-                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">d. Sed</li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+                <div class="feedback"><i class="fa-solid fa-circle"></i></div>
+                    <div class="content">MI is based on the transtheoretical model</div>
+                </li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+                <div class="feedback"><i class="fa-solid fa-circle"></i></div>
+                    <div class="content">MI is a way of tricking people into doing what they don't want to do</div>
+                </li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+                    <div class="feedback"><i class="fa-solid fa-circle"></i></div>
+                    <div class="content">MI is not a technique</div>
+                </li>
+                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+                    <div class="feedback"><i class="fa-solid fa-circle"></i></div>
+                    <div class="content">MI is a clinical method to enhance personal motivation for change</div>
+                </li>
             </ul>
             
-            <p class="bold-text">Q2: How do you spell "Green"?</p>
+            <%# <p class="bold-text">Q2: How do you spell "Green"?</p>
             <ul data-mi-quiz-target="secondQ">
                 <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">a. Greeen</li>
                 <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">b. Green</li>
                 <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">c. Gren</li>
                 <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">d. Grenn</li>
-            </ul>
+            </ul> %>
            
         <a href="" data-action="click->mi-quiz#submit" class="button button-orange">Check results</a>
         <a href="" data-action="click->mi-quiz#reset" class="button button-ghost-orange">Reset</a>
