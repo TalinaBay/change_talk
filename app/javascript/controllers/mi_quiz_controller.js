@@ -2,23 +2,25 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="mi-quiz"
 export default class extends Controller {
-  static targets = ["firstQ", "secondQ"]
+  static targets = ["question"]
 
   connect() {
     // console.log(this.constructor.targets);
-    console.log("14:05");
+    console.log("14:10");
+
+    console.log(this.questionTargets)
+
   }
 
   // ----------------------  EVENT LISTENERS  ----------------------
   submit(event) {
     event.preventDefault() // to stop page from reloading when clicking the button
-   
-    let elements = this.firstQTarget.children;
-    this.checkQuiz(elements);
-    
-    elements = this.secondQTarget.children;
-    this.checkQuiz(elements);
-    
+
+    const targets = this.questionTargets
+    for (let index = 0; index < targets.length; index++) {
+      const elements = targets[index].children;
+      this.checkQuiz(elements);
+    }
   }
    
   clicked(event) {
@@ -38,10 +40,11 @@ export default class extends Controller {
 
   reset(event) {
     event.preventDefault();
-    let elements = this.firstQTarget.children;
-    this.removeAllClasses(elements);
-    elements = this.secondQTarget.children;
-    this.removeAllClasses(elements);
+    const targets = this.questionTargets
+    for (let index = 0; index < targets.length; index++) {
+      const elements = targets[index].children;
+      this.removeAllClasses(elements);
+    }
   }
 
   // ---------------------- FUNCTIONS  ----------------------

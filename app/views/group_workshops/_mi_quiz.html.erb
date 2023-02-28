@@ -1,34 +1,134 @@
- <div data-controller="mi-quiz">
-        <div class="quiz">
-            <p class="bold-text">Q1: Which one is correct for MI?</p>
-            <ul data-mi-quiz-target="firstQ">
-                <li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
-                <div class="feedback"></div>
-                    <div class="content">MI is based on the transtheoretical model</div>
-                </li>
-                <li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
-                <div class="feedback"></div>
-                    <div class="content">MI is a way of tricking people into doing what they don't want to do</div>
-                </li>
-                <li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
-                    <div class="feedback"></div>
-                    <div class="content">MI is not a technique</div>
-                </li>
-                <li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
-                    <div class="feedback"></div>
-                    <div class="content">MI is a clinical method to enhance personal motivation for change</div>
-                </li>
-            </ul>
-          
-            <%# <p class="bold-text">Q2: How do you spell "Green"?</p>
-            <ul data-mi-quiz-target="secondQ">
-                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">a. Greeen</li>
-                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">b. Green</li>
-                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">c. Gren</li>
-                <li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">d. Grenn</li>
-            </ul> %>
-           
-        <a href="" data-action="click->mi-quiz#submit" class="button button-orange">Check results</a>
-        <a href="" data-action="click->mi-quiz#reset" class="button button-ghost-orange">Reset</a>
-        </div>
+<div data-controller="mi-quiz">
+	<div class="quiz">
+		<p class="bold-text">What is Motivational Interviewing (MI)?</p>
+		<ul data-mi-quiz-target="question">
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">A method of persuasion to force patients to change their behavior</div>
+			</li>
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">A technique that uses punishment to deter patients from undesirable behavior</div>
+			</li>
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">A form of hypnosis to control patient behavior</div>
+			</li>
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">A psychotherapeutic approach that aims to evoke and strengthen the motivation for change in a patient</div>
+			</li>
+		</ul>
+	
+		<p class="bold-text">Which of the following are common strategies used in MI?</p>
+		<ul data-mi-quiz-target="question">
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+			<div class="feedback"></div>
+				<div class="content">Expressing empathy</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+			<div class="feedback"></div>
+				<div class="content">Giving direct advice</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">Rolling with resistance</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">Developing ambivalence</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">Using scare tactics</div>
+			</li>
+		</ul>
+
+		<p class="bold-text">Which of the following are core skills of MI?</p>
+		<ul data-mi-quiz-target="question">
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">Giving advice</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">Open-ended questions</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">Reflective listening</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">Affirmations</div>
+			</li>
+		</ul>
+
+		<p class="bold-text">Which one is correct for MI?</p>
+		<ul data-mi-quiz-target="question">
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">MI is based on the transtheoretical model</div>
+			</li>
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">MI is a way of tricking people into doing what they don't want to do</div>
+			</li>
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">MI is a technique</div>
+			</li>
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">MI is a clinical method to enhance personal motivation for change</div>
+			</li>
+		</ul>
+		
+		<p class="bold-text">Which of the following is a common pitfall to avoid in MI?</p>
+		<ul data-mi-quiz-target="question">
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">Offering unsolicited advice</div>
+			</li>
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">Labelling patients as resistant</div>
+			</li>
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="false">
+				<div class="feedback"></div>
+				<div class="content">Focusing on the problem instead of the solution</div>
+			</li>
+			<li class="quiz-answer single-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">All of the above</div>
+			</li>
+		</ul>
+
+		<p class="bold-text">Which of the following are acceptable questions to ask according to MI?</p>
+		<ul data-mi-quiz-target="question">
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">What worries you about your blood pressure?</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">How would you like your health to be in 5 years?</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">What strengths do you have that would help you make a change?</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">Forget how you would go there for a moment. If you could do anything, what would you change?</div>
+			</li>
+			<li class="quiz-answer" data-action="click->mi-quiz#clicked" data-quiz-answer="true">
+				<div class="feedback"></div>
+				<div class="content">What difficulties resulted from your drinking?</div>
+			</li>
+		</ul>
+		
+		<a href="" data-action="click->mi-quiz#submit" class="button button-orange">Check results</a>
+		<a href="" data-action="click->mi-quiz#reset" class="button button-ghost-orange">Reset</a>
+	</div>
 </div>
