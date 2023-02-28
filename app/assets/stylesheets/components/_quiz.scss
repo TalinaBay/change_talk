@@ -23,37 +23,58 @@
     margin-bottom: 5px;
     cursor: pointer;
     vertical-align: middle;
+    display: flex;
+    align-items: center;
     
     &:hover {
       background:#eee;
     }
     
     .feedback {
-      color: rgb(201, 200, 200);
-      font-size: 24px;
+      background-color: #e4e3e3;
+      font-size: 16px;
+      padding: 8px;
+      margin: 0 8px;
+      border-radius: 50%;
+      height: 16px;
+      width: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 8px;
+      }
+    }
+    
+    &.single-answer {
+      .feedback {
+        border-radius: 4px;
+      }
     }
     
     &.active {
       .feedback {
-        color: $accent-color;
+        // background-color: $accent-color;
+        box-shadow:0px 0px 4px 1px rgba($color: black, $alpha: 0.24) inset;      
       }
     }
 
     &.correct {
-        background-color: rgba($color: #5cff71, $alpha: 0.2);
-        border-radius: #5cff71;
-      
+      background-color: rgba($color: #5cff71, $alpha: 0.2);
     }
    
     &.active.correct {
       .feedback {
-        color: #5cff71;
+        background-color: #5cff71;
       }
     }
     &.incorrect {
       background-color: rgba($color: $accent-color, $alpha: 0.2);
-        border-color: $accent-color;
+      border-color: $accent-color;
     }
+
   }
+
 
   

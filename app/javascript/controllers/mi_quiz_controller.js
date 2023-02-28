@@ -6,13 +6,13 @@ export default class extends Controller {
 
   connect() {
     // console.log(this.constructor.targets);
-    console.log("19:59");
+    console.log("14:05");
   }
 
+  // ----------------------  EVENT LISTENERS  ----------------------
   submit(event) {
     event.preventDefault() // to stop page from reloading when clicking the button
    
-  
     let elements = this.firstQTarget.children;
     this.checkQuiz(elements);
     
@@ -20,33 +20,20 @@ export default class extends Controller {
     this.checkQuiz(elements);
     
   }
-
-  checkQuiz(elements) {
-    for (let i = 0; i < elements.length; i++) {
-      if (elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "true")){
-        elements[i].classList.add('correct');
-        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-      } else if (elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "false")) {
-        elements[i].classList.add('incorrect');
-        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
-      } else if (!elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "false")) {
-        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
-      } else if (!elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "true")) {
-        elements[i].classList.add('incorrect');
-        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-      }
-      // TODO: Add explanation
-      // Add a case when not all answers were selected
-    }
-  }
-
+   
   clicked(event) {
-    // event.innerHTML.classList.toggle("active");
-    event.currentTarget.classList.toggle("active");
-    // console.log(event.currentTarget.dataset.quizAnswer) // returns the value of data-*
-    // const result = this.firstQTarget.children[0].classList.contains('active') === event.currentTarget.dataset.quizAnswer;
-    // console.log(result);
-    event.currentTarget.querySelector(".feedback").innerHTML = '<i class="fa-solid fa-circle"></i>';
+    // for single-answer questions
+    if (event.currentTarget.classList.contains('single-answer')) {
+      const parent = event.currentTarget.parentElement
+      const siblings = parent.children
+      // remove active if it was selected previously
+      for (let i = 0; i < siblings.length; i++) {
+        siblings[i].classList.remove("active");
+      }
+      event.currentTarget.classList.add("active");
+    } else { // for multi-answer questions
+      event.currentTarget.classList.toggle("active");
+    }
   }
 
   reset(event) {
@@ -57,10 +44,30 @@ export default class extends Controller {
     this.removeAllClasses(elements);
   }
 
+  // ---------------------- FUNCTIONS  ----------------------
+  checkQuiz(elements) {
+    for (let i = 0; i < elements.length; i++) {
+      if (elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "true")){
+        // console.log(event.currentTarget.dataset.quizAnswer) // returns the value of data-*
+        elements[i].classList.add('correct');
+        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-check"></i>';
+      } else if (elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "false")) {
+        elements[i].classList.add('incorrect');
+        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      } else if (!elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "false")) {
+        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      } else if (!elements[i].classList.contains('active') && (elements[i].dataset.quizAnswer === "true")) {
+        elements[i].classList.add('incorrect');
+        elements[i].querySelector(".feedback").innerHTML = '<i class="fa-solid fa-check"></i>';
+      }
+      // TODO: Add explanation
+    }
+  }
+
   removeAllClasses(questionOptions) { 
     for (let i = 0; i < questionOptions.length; i++) {
       questionOptions[i].classList.remove("active", "correct", "incorrect");
-      questionOptions[i].querySelector(".feedback").innerHTML = '<i class="fa-regular fa-circle"></i>';
+      questionOptions[i].querySelector(".feedback").innerHTML = "";
     }
   }
 }
