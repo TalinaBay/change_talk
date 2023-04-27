@@ -20,3 +20,13 @@
     align-items: center;
     height: 100%; // TODO make sure it's centered
 }
+
+
+.champ-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.champ-right { 
+    padding-top: 60px;
+}
