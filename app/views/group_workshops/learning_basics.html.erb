@@ -1,7 +1,7 @@
-<div class="container-sm my-3">
     <%# General intro %>
+<div class="container-lg my-3">
     <div class="champ-block">
-        <div class="champ-left">
+        <div class="page-content">
             <h1>Welcome!</h1>
             <p>We're glad you're here for our online workshop for general practitioners on applying strategies from motivational interviewing to help patients modify their behaviour. The goal of this training is to give GPs the skills and information they need to effectively employ motivational interviewing strategies to help their patients modify their behaviour.</p>
             <p>During this workshop, participants will not only learn about the principles and techniques of Motivational Interviewing, but also about the stages of change, the link between motivation and health literacy, and the two essential components of motivation. We will delve into how to place a high sense of importance or value in changing an aspect of behavior and how to build self-efficacy or confidence in one's ability to change. With this knowledge, GPs can tailor their approach to best suit the patient's needs, increase the likelihood of success, and reduce the risk of relapse.</p>
@@ -17,13 +17,18 @@
                 <li><a href="#activities">Activities</a></li>
             </ul>
         </div>
-        <div class="champ-right">
-            <%= render partial: 'pages/champion', locals: { instructions: "Welcome to the workshop!" } %>
+
+        <div class="champ-col">
+            <%= render partial: 'pages/champion', locals: { instructions: "Hi, I am your virtual workshop guide. This workshop is designed to be completed on a laptop or desktop computer. For a successful workshop, please gather a group of doctors who will participate in the workshop together and choose one person to be the champion of the workshop, or leader. This person will be responsible for guiding the group through the workshop IRL and ensuring that everyone stays on track." } %>
         </div>
+
+        
     </div>
+</div>
 
-    <hr>
+<hr>
 
+<div class="container-lg my-3">
     <%# Stages of change %>
     <h2 id="stages-of-change">Stages of change</h2>
     <p>In this part of the workshop, we will be discussing the five stages of behavioral change. Understanding these stages is essential in guiding patients towards lasting behavior change.</p>

@@ -1,3 +1,5 @@
+// -------------- Partial ---------------
+
 .champion {
     min-height: 150px;
     width: 220px;
@@ -21,12 +23,14 @@
     height: 100%; // TODO make sure it's centered
 }
 
+// ------------------- HTML content --------------------
 
 .champ-block {
     display: flex;
     justify-content: space-between;
 }
 
-.champ-right { 
+.champ-col { 
     padding-top: 60px;
+    margin-left: 32px;
 }
