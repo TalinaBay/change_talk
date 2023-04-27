@@ -1,1 +1,53 @@
 // Specific CSS for your home-page
+
+.learning-objectives {
+    background-color: rgba($color: $secondary-color, $alpha: 0.3);
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+}
+
+.card { 
+    background-color: white;
+    height: 150px;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0px 0px 16px rgba($color: #000000, $alpha: 0.1);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $secondary-color;
+        box-shadow: 0px 0px 16px rgba($color: #000000, $alpha: 0.2);
+
+        p {
+            color: white;
+        }
+    }
+
+    p {
+        color: $secondary-color;
+        margin: 0;
+    }
+
+    span {
+        font-weight: bold;
+    }
+}
