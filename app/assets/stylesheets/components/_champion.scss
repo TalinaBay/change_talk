@@ -1,0 +1,22 @@
+.champion {
+    min-height: 150px;
+    width: 220px;
+    border-radius: 16px;
+    background-color: rgba($color: $secondary-color, $alpha: 0.2);
+    padding: 16px;
+}
+
+.champion-logo {
+    height: 90px;
+    margin-top: -70px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.champion-note {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 100%; // TODO make sure it's centered
+}
