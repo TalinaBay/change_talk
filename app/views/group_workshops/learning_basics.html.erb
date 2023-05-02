@@ -20,6 +20,11 @@
 
         <div class="champ-col">
             <%= render partial: 'pages/champion', locals: { instructions: "Hi, I am your virtual workshop guide. This workshop is designed to be completed on a laptop or desktop computer. For a successful workshop, please gather a group of doctors who will participate in the workshop together and choose one person to be the champion of the workshop, or leader. This person will be responsible for guiding the group through the workshop IRL and ensuring that everyone stays on track." } %>
+            <audio controls>
+                <source src="<%= asset_path('wsh01-welcome01.mp3') %>" >
+                Your browser does not support the audio element.
+            </audio>
+
         </div>
 
         
@@ -46,6 +51,9 @@
             <%= render partial: "stages_info" %>
         </div>
     </div>
+    <hr>
+    <%# 5As %>
+    <iframe src="https://drive.google.com/file/d/1wwkM6IJdNhzOfk0R606QVR922pcH05WW/preview" width="640" height="480" allow="autoplay"></iframe>
     <%# MI %>
     <hr>
     <h2>MI</h2>
