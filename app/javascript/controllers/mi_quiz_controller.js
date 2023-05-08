@@ -6,9 +6,7 @@ export default class extends Controller {
 
   connect() {
     // console.log(this.constructor.targets);
-    console.log("14:10");
-
-    console.log(this.questionTargets)
+    // console.log(this.questionTargets)
 
   }
 

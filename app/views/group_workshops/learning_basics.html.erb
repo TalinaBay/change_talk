@@ -19,11 +19,22 @@
         </div>
 
         <div class="champ-col">
-            <%= render partial: 'pages/champion', locals: { instructions: "Hi, I am your virtual workshop guide. This workshop is designed to be completed on a laptop or desktop computer. For a successful workshop, please gather a group of doctors who will participate in the workshop together and choose one person to be the champion of the workshop, or leader. This person will be responsible for guiding the group through the workshop IRL and ensuring that everyone stays on track." } %>
-            <audio controls>
-                <source src="<%= asset_path('wsh01-welcome01.mp3') %>" >
-                Your browser does not support the audio element.
-            </audio>
+            <%# <%= render partial: 'pages/champion', locals: { instructions: "Hi, I am your virtual workshop guide. This workshop is designed to be completed on a laptop or desktop computer. For a successful workshop, please gather a group of doctors who will participate in the workshop together and choose one person to be the champion of the workshop, or leader. This person will be responsible for guiding the group through the workshop IRL and ensuring that everyone stays on track." } %>
+            <div class="champion">
+                <%= image_tag "champion.png", alt: "champion logo", class:"champion-logo"%>
+                <div class="champion-note">
+                    <div data-controller="audio">
+                        <i class="fa-solid fa-volume-high" data-action="click->audio#play" data-audio-target="iconPlay"></i>
+                        <i class="fa-solid fa-volume-xmark d-none" data-action="click->audio#pause" data-audio-target="iconPause"></i>
+                        <audio hidden data-audio-target="audioFile">
+                            <source src="<%= asset_path('wsh01-welcome01.mp3') %>" >
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    
+                    <p>Hi, I am your virtual workshop guide. This workshop is designed to be completed on a laptop or desktop computer. For a successful workshop, please gather a group of doctors who will participate in the workshop together and choose one person to be the champion of the workshop, or leader. This person will be responsible for guiding the group through the workshop IRL and ensuring that everyone stays on track</p>
+                </div>
+            </div>
 
         </div>
 
