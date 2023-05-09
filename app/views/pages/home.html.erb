@@ -1,3 +1,4 @@
+<%# BANNER %>
 <div class="banner" style="background-image: url(<%= image_path "banner.gif"%>)">
     <div class="container">
         <h1>High-level consultation skills for GPs</h1>
@@ -7,53 +8,60 @@
           risk factors of smoking,<br> nutrition, alcohol and physical activity (SNAP)
         </p>
         <%= link_to "Explore Workshops", groupworkshops_path, class: "button button-orange"%>
+    </div>
+</div>
+<%# LOGO %>
+<div class="logos">
+    <%= image_tag "UQ-logo.jpg", alt: "University of Queensland logo" %>
+    <%= image_tag "Go8.png", alt: "Group of eight logo" %>
+    <%= image_tag "MU-logo.svg", alt: "Monash University logo" %>
+    <%= image_tag "ANU-logo.png", alt: "Australian National University logo" %>
+    <%= image_tag "Griffith-logo.png", alt: "Griffith University logo" %>
+    <%= image_tag "Athabasca_University_Logo.png", alt: "Athabasca University logo" %>
+</div>
+<%# GP ISSUES %>
+<div class="light-orange">
+  <div class="container ">
+    <div class="gp-issues">
+      <div class="gp-issue">
+        <%= image_tag("gp-stress-man.png") %>
+        <h2>Are you feeling helpless when working with patients on behaviour change?</h2>
+      </div>
+      <div class="gp-issue aligned-right">
+        <h2>Are you struggling to earn CPD hours?</h2>
+        <%= image_tag("gp-doctors.png") %>
+      </div>
+      <div class="gp-issue">
+        <%= image_tag("gp-cheerful.png") %>
+        <h2>Are you searching for an engaging learning platform?</h2>
       </div>
     </div>
-    <div class="logos">
-        <%= image_tag "UQ-logo.jpg", alt: "University of Queensland logo" %>
-        <%= image_tag "Go8.png", alt: "Group of eight logo" %>
-        <%= image_tag "MU-logo.svg", alt: "Monash University logo" %>
-        <%= image_tag "ANU-logo.png", alt: "Australian National University logo" %>
-        <%= image_tag "Griffith-logo.png", alt: "Griffith University logo" %>
-        <%= image_tag "Athabasca_University_Logo.png", alt: "Athabasca University logo" %>
-    </div>
-    <div class="learning-objectives">
-      <div class="container">
-        <h2 class="pt-32">Learn how to ...</h2>
-        <div class="cards pt-32">
-          <div class="card">
-            <p>Employ consultation strategies for working with <span>patients who appear to be unmotivated</span></p>
-          </div>
-          <div class="card">
-            <p>Implement strategies for working with <span>patients who appear to be resistant</span>  to conversations about behaviour change</p>
-          </div>
-          <div class="card">
-            <p>Understand my <span>own feelings of helplessness</span> when working with patients on behaviour change</p>
-          </div>
-          <div class="card">
-            <p>Reflect on your <span>practice's process</span> for documenting potentially modifiable risk factors in patient records</p>
-          </div>
-          <div class="card">
-            <p>Understand the most appropriate ways to raise <span>potential risk behaviours</span> with patients</p>
-          </div>
-          <div class="card">
-            <p>Set <span>expectations of treatment</span> effectively</p>
-          </div>
+  </div>
+</div>
+<%# LEARNING OBJECTIVES %>
+<div class="learning-objectives">
+  <div class="container">
+    <h2 class="pt-32">Learn how to ...</h2>
+    <div class="cards pt-32">
+      <div class="card">
+        <p>Employ consultation strategies for working with <span>patients who appear to be unmotivated</span></p>
+      </div>
+      <div class="card">
+        <p>Implement strategies for working with <span>patients who appear to be resistant</span>  to conversations about behaviour change</p>
+      </div>
+      <div class="card">
+        <p>Understand your <span>own feelings of helplessness</span> when working with patients on behaviour change</p>
+      </div>
+      <div class="card">
+        <p>Reflect on your <span>practice's process</span> for documenting potentially modifiable risk factors in patient records</p>
+      </div>
+      <div class="card">
+        <p>Understand the most appropriate ways to raise <span>potential risk behaviours</span> with patients</p>
+      </div>
+      <div class="card">
+        <p>Set <span>expectations of treatment</span> effectively</p>
+      </div>
 
-        </div>
-      </div>
     </div>
-    <%# <div class="modules">
-
-      <div class="module-cards">
-        <div class="card card-green"> 
-          <p>Learn by yourself</p>
-        </div>
-        <div class="card card-green"> 
-          <div>
-            <p>Reflect within practice</p> 
-            <p>(3 x 1h workshops)</p> 
-          </div>
-        </div>
-      </div>
-    </div> %>
+  </div>
+</div>

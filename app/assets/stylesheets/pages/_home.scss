@@ -50,3 +50,33 @@
         font-weight: bold;
     }
 }
+
+.light-orange {
+    background-color: rgba($color: $primary-color, $alpha: 0.3);
+}
+.gp-issues {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.aligned-right {
+    align-self: end;
+}
+.gp-issue {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    
+    h2 {
+        width: 70%;
+        margin-left: 32px;
+        margin-right: 32px;
+        font-weight: bold;
+    }
+    img {
+        width: 30%;
+    }
+
+}
