@@ -1,0 +1,37 @@
+<div class="champ-block">
+    <div class="page-content">
+        <h1>Welcome!</h1>
+        <p>We're glad you're here for our online workshop for general practitioners on applying strategies from motivational interviewing to help patients modify their behaviour. The goal of this training is to give GPs the skills and information they need to effectively employ motivational interviewing strategies to help their patients modify their behaviour.</p>
+        <p>During this workshop, participants will not only learn about the principles and techniques of Motivational Interviewing, but also about the stages of change, the link between motivation and health literacy, and the two essential components of motivation. We will delve into how to place a high sense of importance or value in changing an aspect of behavior and how to build self-efficacy or confidence in one's ability to change. With this knowledge, GPs can tailor their approach to best suit the patient's needs, increase the likelihood of success, and reduce the risk of relapse.</p>
+        <p>By the end of this workshop, participants will have a deeper understanding of how to use Motivational Interviewing in their practice to help patients achieve their health goals. We look forward to sharing our expertise with you and helping you enhance your skills as a GP.</p>
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#theory">Theory</a></li>
+                <ul>
+                    <li><a href="#stages-of-change">Stages of change</a></li>
+                    <li><a href="#motivation">Motivation</a></li>
+                    <li><a href="#motivation-and-health-literacy">Motivation and health literacy</a></li>
+                </ul>
+            <li><a href="#activities">Activities</a></li>
+        </ul>
+    </div>
+
+    <div class="champ-col">
+        <%# <%= render partial: 'pages/champion', locals: { instructions: "Hi, I am your virtual workshop guide. This workshop is designed to be completed on a laptop or desktop computer. For a successful workshop, please gather a group of doctors who will participate in the workshop together and choose one person to be the champion of the workshop, or leader. This person will be responsible for guiding the group through the workshop IRL and ensuring that everyone stays on track." } %>
+        <div class="champion">
+            <%= image_tag "champion.png", alt: "champion logo", class:"champion-logo"%>
+            <div class="champion-note">
+                <div data-controller="audio">
+                    <i class="fa-solid fa-volume-high" data-action="click->audio#play" data-audio-target="iconPlay"></i>
+                    <i class="fa-solid fa-volume-xmark d-none" data-action="click->audio#pause" data-audio-target="iconPause"></i>
+                    <audio hidden data-audio-target="audioFile">
+                        <source src="<%= asset_path('wsh01-welcome01.mp3') %>" >
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                
+                <p>Hi, I am your virtual workshop guide. This workshop is designed to be completed on a laptop or desktop computer. For a successful workshop, please gather a group of doctors who will participate in the workshop together and choose one person to be the champion of the workshop, or leader. This person will be responsible for guiding the group through the workshop IRL and ensuring that everyone stays on track</p>
+            </div>
+        </div>
+    </div>  
+</div>

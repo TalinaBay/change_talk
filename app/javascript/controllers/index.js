@@ -15,3 +15,6 @@ application.register("mi-quiz", MiQuizController)
 
 import StagesOfChangeListController from "./stages_of_change_list_controller"
 application.register("stages-of-change-list", StagesOfChangeListController)
+
+import WshMenuController from "./wsh_menu_controller"
+application.register("wsh-menu", WshMenuController)

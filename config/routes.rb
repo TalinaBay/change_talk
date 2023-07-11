@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "/groupworkshops", to: "group_workshops#index"
-  get "/groupworkshops/:id", to: "group_workshops#show", as: "group"
+  get "/groupworkshops/:id/:part", to: "group_workshops#show", as: "group"
 end

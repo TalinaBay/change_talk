@@ -1,0 +1,44 @@
+.workshop-menu {
+    height: 100vh;
+    width: 300px;
+    position: sticky;
+    z-index:1; 
+    position: absolute;
+    left: calc(-0.9*300px);
+    display: flex;
+    transition: transform 0.5s ease;
+
+    &.active {
+        transform: translateX(calc(0.9*300px));
+    }
+}
+
+.course-list {
+    background-color: $secondary-color;
+    width: 90%;
+    height: 100%;
+
+    li {
+        color: $primary-color;
+    }
+}
+
+.menu-toggle {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    i {
+        background-color: $secondary-color;
+        color: $primary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 10px;
+        border-radius: 0 20px 20px 0;
+    }
+
+}
