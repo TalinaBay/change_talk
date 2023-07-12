@@ -1,6 +1,6 @@
 .workshop_cards_background {
     background-color: rgba($primary-color, 0.1);
-    height: 90vh;
+    height: calc(100vh - 50px); // 50px is the height of navbar
     text-align: center;
     display: flex;
     justify-content: center;
