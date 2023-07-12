@@ -3,7 +3,6 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="audio"
 export default class extends Controller {
   connect() {
-    console.log("17.39");
   }
 
   static targets = [ "audioFile", "iconPlay", "iconPause" ]

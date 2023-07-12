@@ -1,35 +1,69 @@
 .workshop-menu {
-    height: 100vh;
-    width: 300px;
+    height: calc(100vh - 50px);
+    width: 450px;
     position: sticky;
-    z-index:1; 
-    position: absolute;
-    left: calc(-0.9*300px);
+    top: 50px;
+    margin-left: calc(-0.9*450px); // 0.9 because course-list width is 90% of the workshop-menu width
+    z-index: 1; 
     display: flex;
     transition: transform 0.5s ease;
-
+    
     &.active {
-        transform: translateX(calc(0.9*300px));
+        transform: translateX(calc(0.9*450px));
+    }
+
+    h3 {
+        color: #416555;
+        opacity: 1;
     }
 }
 
 .course-list {
+    padding: 16px;
     background-color: $secondary-color;
     width: 90%;
     height: 100%;
 
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 24px 0;
+    }
+    
     li {
-        color: $primary-color;
+        padding: 8px;
+    }
+    
+    li.active {
+        border-radius: 8px;
+        background-color: #416555;
+
+        p {
+            color: #b8c5bf;
+        }
+    }
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+
+    &:hover p {
+        color: #b8c5bf;
+    }
+
+    p {
+        color: #416555;
+        margin: 0;
     }
 }
 
 .menu-toggle {
-    width: 10%;
+    width: 30px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 
     i {
         background-color: $secondary-color;
@@ -40,5 +74,4 @@
         padding: 30px 10px;
         border-radius: 0 20px 20px 0;
     }
-
 }

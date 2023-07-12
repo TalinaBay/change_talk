@@ -1,20 +1,23 @@
    <%# Side-bar menu %>
-<div class="workshop-menu" data-controller="wsh-menu">
-    <div class="course-list">
-        <ul>
-            <li>Welcome</li>
-            <li>Stages of Change</li>
-            <li>5As</li>
-            <li>Motivational Interviewing</li>
-        </ul>
+<div class="workshop-page-outline">
+    <div class="workshop-menu" data-controller="wsh-menu">
+        <div class="course-list">
+            <h3>LEARNING BASICS</h3>
+            <ul data-wsh-menu-target="list">
+                <li><a href="<%= group_path(1,1) %>"><div class="list-item"><p>Welcome</p><p>10 min</p></div></a></li>
+                <li><a href="<%= group_path(1,2) %>"><div class="list-item"><p>Stages of Change</p><p>10 min</p></div></a></li>
+                <li><a href="<%= group_path(1,3) %>"><div class="list-item"><p>5As</p><p>10 min</p></div></a></li>
+                <li><a href="<%= group_path(1,4) %>"><div class="list-item"><p>Motivational Interviewing</p><p>10 min</p></div></a></li>
+            </ul>
+        </div>
+        <div class="menu-toggle" data-wsh-menu-target="menuButton" data-action="click->wsh-menu#open" >
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
     </div>
-    <div class="menu-toggle" data-wsh-menu-target="menuButton" data-action="click->wsh-menu#open" >
-        <i class="fa-solid fa-chevron-right"></i>
-    </div>
-</div>
 
-   
-   <%# Page content %>
-<div class="container-lg my-3">
-    <%= render partial: "wsh1_part_#{@part}" %>
+    
+    <%# Page content %>
+    <div class="container-lg my-3">
+        <%= render partial: "wsh1_part_#{@part}" %>
+    </div>
 </div>
