@@ -10,7 +10,7 @@
         </div>
 
         <div class="workshop_cards mt-3">
-            <%= link_to group_path(1) do %>
+            <%= link_to group_path(1, 1) do %>
                 <div class="workshop_card">
                     <%= image_tag("young_doctor.jpeg") %>
                     <div class="card-descr">
@@ -21,12 +21,12 @@
                             <li>What <span>motivation</span> really is if it's not a feeling of excitement</li>
                             <li>Relationship between <span> health illiteracy </span> and motivation</li>
                         </ul>
-                        <%= link_to "Workshop 1", group_path(1), class: "button button-orange" %>
+                        <%= link_to "Workshop 1", group_path(1, 1), class: "button button-orange" %>
                     </div>
 
                 </div>
             <% end %>
-            <%= link_to group_path(2) do %>
+            <%= link_to group_path(2, 1) do %>
                 <div class="workshop_card mx-3">
                     <%= image_tag("consult.jpg") %>
                     <div class="card-descr">
@@ -36,11 +36,11 @@
                             <li>Examples of <span>brief conversations</span> in practice</li>
                             <li>MI skills for <span>pre-contemplative, contemplative</span> patients</li>
                         </ul>
-                        <%= link_to "Workshop 2", group_path(2), class: "button button-orange" %>
+                        <%= link_to "Workshop 2", group_path(2, 1), class: "button button-orange" %>
                     </div>
                 </div>
             <% end %>
-            <%= link_to group_path(3) do %>
+            <%= link_to group_path(3, 1) do %>
                 <div class="workshop_card">
                     <%= image_tag("group_dicsussion.jpg") %>
                     <div class="card-descr">
@@ -50,7 +50,7 @@
                             <li>specific treatments for <span>specific conditions</span> (evidence for weight management, alcohol/smoking cessation)</li>
                             <li>Provide <span>patient information</span></li>
                         </ul>
-                        <%= link_to "Workshop 3", group_path(3), class: "button button-orange" %>
+                        <%= link_to "Workshop 3", group_path(3, 1), class: "button button-orange" %>
                     </div>
                 </div>
             <% end %>
