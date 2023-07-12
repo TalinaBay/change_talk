@@ -8,14 +8,10 @@
 //     to {color: $accent-color;}
 // }
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
     z-index: 2;
 }
 
 .workshop-page-outline {
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
 }
