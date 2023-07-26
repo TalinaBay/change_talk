@@ -1,4 +1,4 @@
-.bubble {
+span.bubble {
     display: inline-block;
     margin: 0 auto;
     padding: 12px 24px;
@@ -6,4 +6,9 @@
     background-color: $secondary-color;
     opacity: 0.6;
     border-radius: 16px;
+}
+
+span.example-response {
+    color: $secondary-color;
+    font-style: italic;
 }
