@@ -2,14 +2,15 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   connect() {
-    console.log("Timer v13");
+    console.log("Timer v15");
   }
 
-  static targets = [ "minutes", "seconds" ]
+  static targets = [ "minutes", "seconds", "startButton" ]
 
  
   // TIMER STARTED
   control() {
+    this.startButtonTarget.setAttribute("disabled", ""); // once the timer starts -> disable the start button
     let secondsLeft = parseInt(this.minutesTarget.textContent) * 60; // convert min from HTML to sec
 
       // countdown
