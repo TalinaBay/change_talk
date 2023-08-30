@@ -27,8 +27,13 @@
     </div>
 
     <div class="champ-col">
-        
-    </div>  
+        <div class="timer" data-controller="timer">
+            <p><span data-timer-target="minutes" class="timer-content">05</span>
+            <span class="timer-content divider">:</span>
+            <span data-timer-target="seconds" class="timer-content">00</span></p>
+            <button type="button" data-action="click->timer#control"><i class="fa-solid fa-play"></i></button>
+        </div>
+    </div> 
 </div>
 <div class="navigation-buttons">
     <%= link_to "Back", group_path(@workshop, @prev_part), class: "button button-orange" %>

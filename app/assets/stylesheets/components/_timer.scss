@@ -1,0 +1,19 @@
+.timer{
+    background-color: rgba($color: $secondary-color, $alpha: 0.2);
+    color: $secondary-color;
+    display: inline-block;
+    padding: 24px 32px;
+    border-radius: 24px;
+    
+    span {
+        font-size: 32px;
+    }
+    button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        color: white;
+        background-color: $primary-color;
+    }
+}
