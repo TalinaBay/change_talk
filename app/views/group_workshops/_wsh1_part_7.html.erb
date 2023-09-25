@@ -10,30 +10,86 @@
 
         <hr>
         <p><span>Instructions</span></p>
-        <ol>
-            <li class="bold-text">Reflection on Patient Encounters (5 minutes):</li>
-            <ul><li>Take a moment to individually reflect on past patient encounters where the patient appeared unmotivated to embrace behavior change.</li><li>Select one volunteer from the group who would like to share their patient's notes.</li></ul>
-            <li class="bold-text">Patient's case (3 minutes):</li>
-            <ul><li>We invite the chosen volunteer to share their notes on a patient encounter where motivation seemed lacking.</li></ul>
-            <li class="bold-text">Group Discussion (7 minutes):</li>
-            <ul><li>Reflect on whether the perceived lack of motivation could be due to underlying factors like poor health literacy, cultural differences, or other barriers.</li><li>Champion, if you are on time, please encourage other participants to share instances where they may have initially misjudged a patient's motivation but later discovered underlying reasons for their seeming lack of enthusiasm.</li></ul>
-            <li class="bold-text">Exploring Obstacles and Empathy (5 minutes):</li>
-            <ul><li>From your professional experience, what are potential obstacles faced by patients? Please discuss in the team.</li><li>Explore how approaching patients with empathy and cultural sensitivity can create a safe and supportive space for open communication.</li></ul>
-            <li class="bold-text">Strategies for Empathetic Care (5 minutes):</li>
-            <ul><li>Share and discuss strategies (e.g. the "teach-back" method) for recognizing and addressing misjudged motivation in patients.</li></ul>
-            <li class="bold-text">Key Takeaways (3 minutes):</li>
-            <ul><li>The champion, please summarise the key insights gained from the discussion and the importance of avoiding hasty judgments about patient motivation.</li></ul>
-        </ol>
+    
+    
     </div>
 
     <div class="champ-col">
-        <div class="timer" data-controller="timer">
-            <p><span data-timer-target="minutes" class="timer-content">05</span>
-            <span class="timer-content divider">:</span>
-            <span data-timer-target="seconds" class="timer-content">00</span></p>
-            <button type="button" data-timer-target="startButton" data-action="click->timer#control"><i class="fa-solid fa-play"></i></button>
-        </div>
     </div> 
+</div>
+
+<div class="activity-cards">
+    <ul>
+        <li class="activity-card">
+            <div class="activity-card__content">
+                <div class="activity-card__text">
+                    <h1>Reflection on Patient Encounters </h1>
+                    <p>Take a moment to individually reflect on past patient encounters where the patient appeared unmotivated to embrace behavior change.</p>
+                    <p>Select one volunteer from the group who would like to share their patient's notes.</p>
+                </div>
+                <div class="activity-card__timer">
+                    <%= render partial: 'timer', locals: { start_min: 5.to_s.rjust(2,'0') } %>
+                </div>
+            </div>
+        </li>
+        <li class="activity-card">
+            <div class="activity-card__content">
+                <div class="activity-card__text">
+                    <h1>Patient's case</h1>
+                    <p>We invite the chosen volunteer to share their notes on a patient encounter where motivation seemed lacking.</p>
+                </div>
+                <div class="activity-card__timer">
+                    <%= render partial: 'timer', locals: { start_min: 3.to_s.rjust(2,'0') } %>
+                </div>
+            </div>
+        </li>
+        <li class="activity-card">
+            <div class="activity-card__content">
+                <div class="activity-card__text">
+                    <h1>Group Discussion</h1>
+                    <p>Reflect on whether the perceived lack of motivation could be due to underlying factors like poor health literacy, cultural differences, or other barriers.</p>
+                    <p>Champion, if you are on time, please encourage other participants to share instances where they may have initially misjudged a patient's motivation but later discovered underlying reasons for their seeming lack of enthusiasm.</p>
+                </div>
+                <div class="activity-card__timer">
+                    <%= render partial: 'timer', locals: { start_min: 7.to_s.rjust(2,'0') } %>
+                </div>
+            </div>
+        </li>
+        <li class="activity-card">
+            <div class="activity-card__content">
+                <div class="activity-card__text">
+                    <h1>Exploring Obstacles and Empathy</h1>
+                    <p>From your professional experience, what are potential obstacles faced by patients? Please discuss in the team.</p>
+                    <p>Explore how approaching patients with empathy and cultural sensitivity can create a safe and supportive space for open communication.</p>
+                </div>
+                <div class="activity-card__timer">
+                    <%= render partial: 'timer', locals: { start_min: 5.to_s.rjust(2,'0') } %>
+                </div>
+            </div>
+        </li>
+        <li class="activity-card">
+            <div class="activity-card__content">
+                <div class="activity-card__text">
+                    <h1>Strategies for Empathetic Care</h1>
+                    <p>Share and discuss strategies (e.g. the "teach-back" method) for recognizing and addressing misjudged motivation in patients.</p>
+                </div>
+                <div class="activity-card__timer">
+                    <%= render partial: 'timer', locals: { start_min: 5.to_s.rjust(2,'0') } %>
+                </div>
+            </div>
+        </li>
+        <li class="activity-card">
+            <div class="activity-card__content">
+                <div class="activity-card__text">
+                    <h1>Key Takeaways</h1>
+                    <p>The champion, please summarise the key insights gained from the discussion and the importance of avoiding hasty judgments about patient motivation.</p>
+                </div>
+                <div class="activity-card__timer">
+                    <%= render partial: 'timer', locals: { start_min: 3.to_s.rjust(2,'0') } %>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>
 <div class="navigation-buttons">
     <%= link_to "Back", group_path(@workshop, @prev_part), class: "button button-orange" %>

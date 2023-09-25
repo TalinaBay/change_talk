@@ -43,3 +43,40 @@
         color: white;
     }
 }
+.activity-cards {
+    ul {
+        padding: 0
+    };
+}
+.activity-card {
+    background-color: $primary-color;
+    list-style-type: none;
+    border-radius: 24px;
+    padding: 0;
+    margin: 32px 0;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -20px 50px rgba($secondary-color, 0.2);
+    position: sticky;
+    top: calc(5vh + 32px);
+
+    .activity-card__content {
+        padding: 88px;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            margin: 40px 0;
+            font-size: 20px;
+        }
+    }
+
+    .activity-card__timer {
+        margin-left: 32px;
+        
+    }
+    
+}
+
