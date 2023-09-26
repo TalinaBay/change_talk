@@ -13,5 +13,8 @@ class GroupWorkshopsController < ApplicationController
         if @workshop.to_i == 2
             render "explore_challenges"
         end
+        if @workshop.to_i == 3
+            render "practice_implementation"
+        end
     end
 end
