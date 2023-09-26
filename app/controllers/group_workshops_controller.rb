@@ -10,5 +10,8 @@ class GroupWorkshopsController < ApplicationController
         if @workshop.to_i == 1
             render "learning_basics"
         end
+        if @workshop.to_i == 2
+            render "explore_challenges"
+        end
     end
 end

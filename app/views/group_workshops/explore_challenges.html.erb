@@ -1,0 +1,21 @@
+   <%# Side-bar menu %>
+<div class="workshop-page-outline">
+    <div class="workshop-menu" data-controller="wsh-menu">
+        <div class="course-list">
+            <h3>EXPLORE CHALLENGES</h3>
+            <ul data-wsh-menu-target="list">
+                <li><a href="<%= group_path(2,1) %>"><div class="list-item"><p>Welcome</p><p>5 min</p></div></a></li>
+                <li><a href="<%= group_path(2,2) %>"><div class="list-item"><p>Exploring challenges</p><p>20 min</p></div></a></li>
+            </ul>
+        </div>
+        <div class="menu-toggle" data-wsh-menu-target="menuButton" data-action="click->wsh-menu#open" >
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+
+    
+    <%# Page content %>
+    <div class="container-lg my-3">
+        <%= render partial: "wsh2_part_#{@part}" %>
+    </div>
+</div>
