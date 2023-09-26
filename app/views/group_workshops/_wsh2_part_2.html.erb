@@ -1,0 +1,43 @@
+<div class="champ-block">
+    <div class="page-content">
+        <h1>Activity: Exploring the challenges</h1>
+
+        <p>Please nominate a champion, a seasoned professional, who will navigate through our discussion and ensure a productive exploration.</p>
+        <div class="activity-cards">
+            <ul>
+                <li class="activity-card">
+                    <div class="activity-card__content">
+                        <div class="activity-card__text">
+                            <h1>Sharing Experiences</h1>
+                            <p>Invite participants to take turns sharing their experiences with behavior change in patients. Each participant should have 2-3 minutes to discuss a specific patient case or scenario.</p>
+                            <p>Champion will keep track of key challenges mentioned.</p>
+                            <p>Encourage participants to highlight challenges they encountered that seemed particularly hard.</p>
+                        </div>
+                        <div class="activity-card__timer">
+                            <%= render partial: 'timer', locals: { start_min: 15.to_s.rjust(2,'0') } %>
+                        </div>
+                    </div>
+                </li>
+                <li class="activity-card">
+                    <div class="activity-card__content">
+                        <div class="activity-card__text">
+                            <h1>Identifying Common Challenges</h1>
+                            <p>Based on the shared experiences, guide a discussion to identify common challenges faced by healthcare professionals in supporting behaviour change.</p>
+                            <p>Champion should facilitate the discussion by asking open-ended questions and encouraging participants to share their insights.</p>
+                            <p>Create a list of common challenges on a whiteboard or digital platform.</p>
+                        </div>
+                        <div class="activity-card__timer">
+                            <%= render partial: 'timer', locals: { start_min: 10.to_s.rjust(2,'0') } %>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <p>Please keep the list of challenges accessible throughout the duration of the workshop as we will address it continiously.</p>
+    </div>
+</div>
+<div class="navigation-buttons">
+<%= link_to "Back", group_path(@workshop, @prev_part), class: "button button-orange" %>
+<%= link_to "Next", group_path(@workshop, @next_part), class: "button button-orange" %>
+</div>

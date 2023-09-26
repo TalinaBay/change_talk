@@ -1,0 +1,51 @@
+<div class="page-content">
+    <h1>Brief conversations in practice</h1>
+
+    <p>You've collectively recognised a few hurdles that you often face in your line of work. One common challenge that resonates with many health professionals is the relentless ticking of the clock during patient consultations. The pressures of short appointment slots can leave health professionals wondering how to tackle the depth of their patients' health needs effectively.</p>
+    <p>But, worry not, because in this part of our workshop, we're diving into practical strategies that can help us navigate these time constraints like true pros. We'll uncover how to plant those all-important "seeds" of change, as we discussed in our previous session, even within the confines of a quick chat.</p>
+    <p>To start off the discussion, please watch the video below. In this video, a GP grapples with a short consultation time while raising an important discussion about a patient's weight management. This video serves as a ripper illustration of how, even in the shortest of exchanges, we can sow the seeds of change, nurturing the potential for future progress.</p>
+
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/bTRRNWrwRCo?si=ZNXLcLul0AsIS6_U&amp;start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <div class="activity-cards">
+        <ul>
+            <li class="activity-card">
+                <div class="activity-card__content">
+                    <div class="activity-card__text">
+                        <h1>Initial thoughts</h1>
+                        <p>In a group, please share your initial impressions and thoughts about the GP's approach. Consider the effectiveness of the GP's communication and any positive aspects you have observed.</p>
+                    </div>
+                    <div class="activity-card__timer">
+                        <%= render partial: 'timer', locals: { start_min: 5.to_s.rjust(2,'0') } %>
+                    </div>
+                </div>
+            </li>
+            <li class="activity-card">
+                <div class="activity-card__content">
+                    <div class="activity-card__text">
+                        <h1>Reflecting on the time constraints</h1>
+                        <p>Transition to a discussion of the challenges and limitations faced by the GP in this brief consultation. In a group, identify specific barriers related to time constraints and the patient's pre-contemplative stage.</p>
+                    </div>
+                    <div class="activity-card__timer">
+                        <%= render partial: 'timer', locals: { start_min: 5.to_s.rjust(2,'0') } %>
+                    </div>
+                </div>
+            </li>
+            <li class="activity-card">
+                <div class="activity-card__content">
+                    <div class="activity-card__text">
+                        <h1>Brainstorming ideas</h1>
+                        <p>Please share your own experiences or tactics you have used to address similar challenges in your practice.</p>
+                    </div>
+                    <div class="activity-card__timer">
+                        <%= render partial: 'timer', locals: { start_min: 5.to_s.rjust(2,'0') } %>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="navigation-buttons">
+    <%= link_to "Back", group_path(@workshop, @prev_part), class: "button button-orange" %>
+    <%= link_to "Next", group_path(@workshop, @next_part), class: "button button-orange" %>
+</div>

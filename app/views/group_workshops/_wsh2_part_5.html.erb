@@ -1,0 +1,54 @@
+<div class="champ-block">
+    <div class="page-content">
+        <h1>Activity: Brainstorming Solutions</h1>
+
+        <div class="activity-cards">
+            <ul>
+                <li class="activity-card">
+                    <div class="activity-card__content">
+                        <div class="activity-card__text">
+                            <h1>Brainstorming Solutions</h1>
+                            <p>Transition to a brainstorming session where participants collectively suggest strategies and solutions to address the challenges identified in the beginning of the workshop.</p>
+                            <p>Champion should guide the brainstorming process and ensure that a diverse range of ideas is considered.</p>
+                            <p>Document the suggested solutions alongside the list of challenges.</p>
+                        </div>
+                        <div class="activity-card__timer">
+                            <%= render partial: 'timer', locals: { start_min: 15.to_s.rjust(2,'0') } %>
+                        </div>
+                    </div>
+                </li>
+                <li class="activity-card">
+                    <div class="activity-card__content">
+                        <div class="activity-card__text">
+                            <h1>Group Discussion</h1>
+                            <p>Open the floor for a group discussion where participants can ask questions, seek clarification, and provide additional insights.</p>
+                            <p>Encourage participants to share their thoughts on the feasibility and effectiveness of the suggested solutions.</p>
+                            <p>Champion should moderate the discussion to keep it focused and constructive.</p>
+                        </div>
+                        <div class="activity-card__timer">
+                            <%= render partial: 'timer', locals: { start_min: 10.to_s.rjust(2,'0') } %>
+                        </div>
+                    </div>
+                </li>
+                <li class="activity-card">
+                    <div class="activity-card__content">
+                        <div class="activity-card__text">
+                            <h1>Action Plan</h1>
+                            <p>Summarize the key challenges and potential solutions discussed during the workshop.</p>
+                            <p>Discuss the importance of implementing these solutions in participants' healthcare practices.</p>
+                            <p>Invite participants to consider how they can incorporate these strategies into their patient interactions.</p>
+                        </div>
+                        <div class="activity-card__timer">
+                            <%= render partial: 'timer', locals: { start_min: 5.to_s.rjust(2,'0') } %>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="navigation-buttons">
+    <%= link_to "Back", group_path(@workshop, @prev_part), class: "button button-orange" %>
+    <%= link_to "Finish the Workshop", groupworkshops_path, class: "button button-orange" %>
+</div>

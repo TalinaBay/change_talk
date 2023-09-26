@@ -1,0 +1,64 @@
+<div class="champ-block">
+    <div class="page-content">
+        <h1>MI for pre-contemplative patients</h1>
+
+        <p>Please read a follow-up consultation with Mr Smith about his weight management. Try to recall MI tactics from the prior workshop or from your professional background while you read.</p>
+
+        <div class="chat-container">
+            <ul class="chat">
+                <li class="user-message">Good morning, Mr. Smith. Thank you for being here today. I remember our last conversation, and I appreciate you taking the time to discuss your health with me. How have you been since our last visit?</li>
+                <li class="other-message">Morning, Doctor. Well, not much has changed. Still busy as ever with the business. But I'm here as promised.</li>
+
+                <li class="user-message">I understand how hectic your schedule can be, Mr. Smith. I'm glad you made it. Now, last time, we briefly touched upon the topic of your weight. You mentioned that ideally, you'd like to address it, but it's been challenging due to your demanding work hours. I want you to know that I appreciate your honesty about this.</li>
+                <li class="other-message">Yeah, well, you know how it is. Running a business is non-stop, and I barely have time to sit down, let alone exercise or cook healthy meals.</li>
+                
+                <li class="user-message">I completely understand, Mr. Smith. Your dedication to your business is evident. I want to assure you that I'm here to support you, and we can work on finding practical solutions that fit into your busy lifestyle. I remember you weren't too happy last time when I brought up your weight, and I apologize if that caught you off guard. I suggested this appointment to give us more time to discuss it properly.</li>
+                <li class="other-message">Yeah, I appreciate that, Doctor. It just felt like an ambush last time. But I do realize I need to do something about my weight.</li>
+                
+                <li class="user-message">That's understandable, Mr. Smith. I recognize that making significant changes to your diet can be challenging, especially with your busy schedule. It's important to be realistic and find options that work for you. While fast food can be convenient, we can explore ways to make your choices a bit healthier without disrupting your routine too much.</li>
+                <li class="other-message">Well, Doc, I don't really have the time or the energy to cook. It's just so much easier to grab something quick.</li>
+                
+                <li class="user-message">I get it, Mr. Smith. Time is precious, and convenience matters. How about we start with small adjustments? For instance, instead of dessert, you could opt for a high-protein and fiber snack like nuts with fruits. You can easily find these in most supermarkets, and they're quick to grab. It's a small change that can make a difference.</li>
+                <li class="other-message"> I suppose I could give that a try. But I'm not sure about cooking vegetables or anything like that.</li>
+                
+                <li class="user-message">That's completely fine, Mr. Smith. You don't necessarily need to cook from scratch. You can buy ready-made items in the supermarket that are a bit healthier than fast food options. And here's a tip: consider using frozen vegetables. They're affordable, easy to prepare in a microwave, and can be a nutritious addition to your meals.</li>
+                <li class="other-message">Alright, I'll keep that in mind. But I'm just so busy; I can't see myself making big changes to my diet.</li>
+                
+                <li class="user-message">I appreciate your honesty, Mr. Smith. Making significant dietary changes can be daunting, especially with a packed schedule. What we're aiming for here is progress, not perfection. It's about finding manageable ways to make healthier choices. Remember, I'm here to support you every step of the way.</li>
+                <li class="other-message">Thanks, Doctor. I'll give it a shot.</li>
+                
+                <li class="user-message">That's the spirit, Mr. Smith. Now, let's talk about physical activity. I understand you might have reservations about this as well.</li>
+                <li class="other-message">You got it, Doc. With my workload, I barely have time for anything extra.</li>
+                
+                <li class="user-message">I completely understand, Mr. Smith. How about this: since you're often on your feet at work, how about taking short walks during your breaks? It doesn't have to be a dedicated exercise routine. Just a few minutes here and there to get some fresh air and stretch your legs. It can be a great way to fit in some physical activity without disrupting your work too much.</li>
+                <li class="other-message">Well, I suppose I could manage that. Short walks won't eat up too much of my time.</li>
+                
+                <li class="user-message">Exactly, Mr. Smith. We're looking for practical, sustainable solutions that work for your busy life. These short walks can contribute to your overall well-being without overwhelming your schedule. Let's start with these small steps, and we'll adjust as we go along. Your health is important, and I'm here to help you make it a priority, even with your demanding business.</li>
+                <li class="other-message">Thanks, Doctor. I appreciate your understanding and willingness to help.</li>
+                
+                <li class="user-message">You're very welcome, Mr. Smith. Your health is important, and I'm here to assist you in any way I can. Let's continue this conversation and explore these strategies further in our future appointments. Your commitment to making positive changes is commendable, and I'm confident that we can achieve your health goals together.</li>
+            </ul>
+        </div>
+
+        <div class="activity-cards">
+            <ul>
+                <li class="activity-card">
+                    <div class="activity-card__content">
+                        <div class="activity-card__text">
+                            <h1>Consulation debrief</h1>
+                            <p>In a group, please share your initial impressions and thoughts about the GP's approach. Consider the effectiveness of the GP's communication and share how you would have led the consulation.</p>
+                        </div>
+                        <div class="activity-card__timer">
+                            <%= render partial: 'timer', locals: { start_min: 7.to_s.rjust(2,'0') } %>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="navigation-buttons">
+    <%= link_to "Back", group_path(@workshop, @prev_part), class: "button button-orange" %>
+    <%= link_to "Next", group_path(@workshop, @next_part), class: "button button-orange" %>
+</div>
